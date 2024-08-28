@@ -4,11 +4,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RevoU - Julio Philippus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <header id="nav-header">
+        <h1>JP</h1>
+        <nav>
+            <a href="#home-section">Home</a>
+            <a href="#profile-section">Profile</a>
+            <a href="#message-section">Message Us</a>
+        </nav>
+    </header>
+
+    <section id="home-section">
+        <header>
+            <div>
+                <h1>Hi <span id="visitor-name"></span>, welcome to my website!</h1>
+                <p>Thank you for coming.</p>
+            </div>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img class="img-slide" src="images/dwcu.jpg">
+                    <div class="text">I am a new graduate from Duta Wacana Christian University</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img class="img-slide" src="images/is.jpg">
+                    <div class="text">My major is Information Systems</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img class="img-slide" src="images/web.png">
+                    <div class="text">Interested in Web Development</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </header>
+    </section>
+
+    <section id="profile-section">
+        <header class="profile-header">
+            <h1>Profile</h1>
+        </header>
+        <div class="profile-detail">
+            <div class="profile-detail-item">
+                <img src="images/service1.png" alt="Service 1 Image">
+                <h2>Web Application</h2>
+                <p>Web application can be your best and easiest solution for your problem that can be access anywhere
+                </p>
+            </div>
+            <div class="profile-detail-item">
+                <img src="images/service2.png" alt="Service 2 Image">
+                <h2>UI/UX Design</h2>
+                <p>We create the best design based on problem we analyze and give the best experience to user</p>
+            </div>
+            <div class="profile-detail-item">
+                <img src="images/service3.png" alt="Service 3 Image">
+                <h2>Mobile Application</h2>
+                <p>Mobile application can be your best solution for the easy access application where everybody have a
+                    phone</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="message-section">
+        <header class="message-header">
+            <h1>Message Us</h1>
+        </header>
+        <div class="container">
+            <div class="form-container">
+                <form name="message-form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <strong><label for="name-input">Name</label></strong>
+                        <input type="text" id="name-input" name="name-input" placeholder="Enter your name">
+                        <span class="error" id="error-name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob-input">Date of birth</label>
+                        <input type="date" id="dob-input" name="dob-input" placeholder="dd/mm/yyyy">
+                        <span class="error" id="error-dob"></span>
+                    </div>
+                    <div class="form-group">
+                        <strong><label>Gender</label></strong>
+                        <label for="male"><input type="radio" id="gender" name="gender-input" value="Male">Male</label>
+                        <label for="female"><input type="radio" id="gender" name="gender-input"
+                                value="Female">Female</label>
+                        <span class="error" id="error-gender"></span>
+                    </div>
+                    <div class="form-group">
+                        <strong><label for="message-input">Message</label></strong>
+                        <textarea id="message-input" name="message-input" placeholder="Enter your message"></textarea>
+                        <span class="error" id="error-message"></span>
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="output-container">
+                <div id="output"></div>
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Julio Philippus. All Rights Reserved.</p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 
